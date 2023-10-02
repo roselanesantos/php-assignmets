@@ -1,0 +1,70 @@
+fieldset{
+    display: inline-block;
+
+}
+
+/*1. Base Structure*/
+html {
+	background-color: white;
+}
+
+
+/* Global styles */
+body {
+    font-family: Tahoma, Verdana, sans-serif;
+    
+}
+
+
+header h1 {
+    text-align: center;
+    
+
+}
+
+header .logo {
+    float: left;
+}
+
+header {
+    background-color: rgb(226, 43, 144);
+    color: #fff;    
+    padding: 20px 0;
+    margin-bottom: 15px;
+}
+
+table{
+    table-layout: auto;
+    width: 100%;  
+    border-collapse: collapse;
+    color: black;
+}
+
+body {
+    background-color: blanchedalmond;
+    
+}
+nav {
+    float: right;
+    padding: 5px;
+}
+
+
+/* Footer styling */
+footer {
+    background-color: gray;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+   text-align: left;
+}
+
+footer p {
+    font-size: 0.8rem;
+}
+
+
