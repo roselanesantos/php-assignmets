@@ -29,7 +29,7 @@
             <fieldset>
                 <legend>Document Automation Python:</legend>
                 <label for="course1_grade_assignment_1">Grade assignment 1</label><br>
-                <input type="number" id="course1_grade_assignment_1" name="course1_grade_assignment_1" required><br>
+                <input type="number" id="course1_grade_assignment_1" name="course1_grade_assignment_1" required min= "0" max="25"><br>
                 <label for="course1_grade_assignment_2">Grade assignment 2</label><br>
                 <input type="number" id="course1_grade_assignment_2" name="course1_grade_assignment_2" required><br>
                 <label for="course1_project">Grade project</label><br>

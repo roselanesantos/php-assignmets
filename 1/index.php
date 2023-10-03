@@ -92,11 +92,9 @@
                     <td colspan="2">Total </td>                
                     <td rowspan="2">Final grade</td>
                     <td rowspan="2">Total absences</td>
-                    
-                    
                 </tr>
+
                 <tr> 
-                    
                     <td>Assignment 1</td>
                     <td>Assignment 2</td>
                     <td>Project</td>
@@ -104,6 +102,7 @@
                     <td>Grade</td>
                     <td>Absence</td>
                 </tr>
+
                 <tr> 
                     <td>Document Automation Python</td>
                     <td><?=$student_data["course1_grade_assignment_1"] ?? "" ?></td>
@@ -113,8 +112,9 @@
                     <td><?=calc_grade($student_data,"course1") ?></td>
                     <td><?=$student_data["course1_absences"] ?? "" ?></td>
                     <td><?php if($student_id) echo calc_grade($student_data,"course1") > 60? "Passed": "Failed" ?></td>
-                    <td><?php if($student_id) echo 100 - $student_data["course1_absences"] > 75? "Passed": "Failed" ?></td>
+                    <td><?php if($student_id) echo 100 - $student_data["course1_absences"] > 75? "Passed": "Failed due to absence" ?></td>
                 </tr>
+
                 <tr> 
                     <td>Interface Design Using CSS</td>
                     <td><?=$student_data["course2_grade_assignment_1"] ?? "" ?></td>
@@ -124,8 +124,9 @@
                     <td><?=calc_grade($student_data,"course2") ?></td>
                     <td><?=$student_data["course2_absences"] ?? "" ?></td>
                     <td><?php if($student_id) echo calc_grade($student_data,"course2") > 60? "Passed": "Failed" ?></td>
-                    <td><?php if($student_id) echo 100 - $student_data["course2_absences"] > 75? "Passed": "Failed" ?></td>
+                    <td><?php if($student_id) echo 100 - $student_data["course2_absences"] > 75? "Passed": "Failed due to absence" ?></td>
                 </tr>
+
                 <tr> 
                     <td>Intro Obj Oriented Prog-Java</td>
                     <td><?=$student_data["course3_grade_assignment_1"] ?? "" ?></td>
@@ -135,8 +136,9 @@
                     <td><?=calc_grade($student_data,"course3") ?></td>
                     <td><?=$student_data["course3_absences"] ?? "" ?></td>
                     <td><?php if($student_id) echo calc_grade($student_data,"course3") > 60? "Passed": "Failed" ?></td>
-                    <td><?php if($student_id) echo 100 - $student_data["course3_absences"] > 75? "Passed": "Failed" ?></td>
+                    <td><?php if($student_id) echo 100 - $student_data["course3_absences"] > 75? "Passed": "Failed due to absence" ?></td>
                 </tr>
+
                 <tr> 
                     <td>Intro to Web Prog using PHP</td>
                     <td><?=$student_data["course4_grade_assignment_1"] ?? "" ?></td>
@@ -146,8 +148,9 @@
                     <td><?=calc_grade($student_data,"course4") ?></td>
                     <td><?=$student_data["course4_absences"] ?? "" ?></td>
                     <td><?php if($student_id) echo calc_grade($student_data,"course4") > 60? "Passed": "Failed" ?></td>
-                    <td><?php if($student_id) echo 100 - $student_data["course4_absences"] > 75? "Passed": "Failed" ?></td>
+                    <td><?php if($student_id) echo 100 - $student_data["course4_absences"] > 75? "Passed": "Failed due to absence" ?></td>
                 </tr>
+
                 <tr> 
                     <td>Relational Database</td>
                     <td><?=$student_data["course5_grade_assignment_1"] ?? "" ?></td>
@@ -157,8 +160,9 @@
                     <td><?=calc_grade($student_data,"course5") ?></td>
                     <td><?=$student_data["course5_absences"] ?? "" ?></td>
                     <td><?php if($student_id) echo calc_grade($student_data,"course5") > 60? "Passed": "Failed" ?></td>
-                    <td><?php if($student_id) echo 100 - $student_data["course5_absences"] > 75? "Passed": "Failed" ?></td>
+                    <td><?php if($student_id) echo 100 - $student_data["course5_absences"] > 75? "Passed": "Failed due to absence" ?></td>
                 </tr>
+
                 <tr> 
                     <td>Work Environment Comm</td>
                     <td><?=$student_data["course6_grade_assignment_1"] ?? "" ?></td>
@@ -168,15 +172,16 @@
                     <td><?=calc_grade($student_data,"course6") ?></td>
                     <td><?=$student_data["course6_absences"] ?? "" ?></td>
                     <td><?php if($student_id) echo calc_grade($student_data,"course6") > 60? "Passed": "Failed" ?></td>
-                    <td><?php if($student_id) echo 100 - $student_data["course6_absences"] > 75? "Passed": "Failed" ?></td>
+                    <td><?php if($student_id) echo 100 - $student_data["course6_absences"] > 75? "Passed": "Failed due to absence" ?></td>
                 </tr>
+
                 <tr> 
                     <td colspan="9">&nbsp;</td>
                 </tr>
                 <tr> 
                     <td colspan="3">Current status: finished<br>
                         Print date: 01/10/2023</td>
-                    <td colspan="6">Percentage of absences in relation to working hours: maximum allowed: 25%</td>
+                    <td colspan="6">Percentage of absences in relation to working hours (100 hours): maximum allowed: 25%</td>
                     
                 </tr>
             </table>
