@@ -21,7 +21,7 @@
         $student_data = [];
         $student_id = '';
         // If press Submit botton, will select the data from the student table
-        if (isset($_GET['student_id'])) {
+        if (isset($_GET['student_id'])&& $_GET['student_id']!= "") {
             $student_id = $_GET['student_id'];
             $sql = "SELECT * from student_grade where id=".$student_id;
             $student_data = $mysqli->query($sql)->fetch_assoc();
@@ -91,7 +91,7 @@
                     <td colspan="4">Module 1</td>
                     <td colspan="2">Total </td>                
                     <td rowspan="2">Final grade</td>
-                    <td rowspan="2">Total absences</td>
+                    <td rowspan="2">Final attendance</td>
                 </tr>
 
                 <tr> 
