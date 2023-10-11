@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Add Content</title>
     <meta name="author" content="Roselane Goncalves dos Santos" />
-    <meta name="description" content="This HTML is a table for ...">
+    <meta name="description" content="This is a database to add student grades">
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -16,7 +16,14 @@
     </header>
 
     <nav>
-        <a href="index.php">View Content</a> 
+        <a href="index.php">
+         <button>View Content</button>
+        </a>
+    </nav>
+    <nav>
+        <a href="add_content.php">
+            <button>Add content</button>
+        </a>
     </nav>
     
     <main>

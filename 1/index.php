@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>View Content</title>
     <meta name="author" content="Roselane Goncalves dos Santos" />
-    <meta name="description" content="This HTML is a table for ...">
+    <meta name="description" content="This is a database to add student grades">
     <link rel="stylesheet" href="css/styles.css" />
 </head>
     <?php
@@ -45,11 +45,17 @@
                 <img src="img/logo.png" alt="Car" style="width:45%">    
             </div>      
             <h1>Student records</h1>            
-        </header>
-
+        </header> 
         <nav>
-            <a href="add_content.php">Add content</a>
-        </nav> 
+            <a href="add_content.php">
+            <button>Add content</button>
+            </a>
+        </nav>
+        <nav>
+            <a href="index.php">
+                <button>View Content</button>
+            </a>
+        </nav>
         
         <main>
             
