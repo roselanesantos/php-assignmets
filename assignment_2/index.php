@@ -78,7 +78,7 @@ function calc_grade($student_data, $course)
             <tr>
                 <td class="student-photo" colspan="9">
                     <? if ($student_data["photo"]) { ?>
-                        <img src="uploads/$student_data['photo']">
+                        <img src="<?=$student_data['photo']?>">
                     <? } else { ?>
                         <img src="img/avatar.png">
                     <? } ?>

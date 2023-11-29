@@ -45,7 +45,7 @@ function generateRandomString() {
 }
 
 if (isset($_FILES['photo'])) {
-    $photo = "$uploaddir/". generateRandomString() . '.png';
+    $photo = "$uploaddir". generateRandomString() . '.png';
     move_uploaded_file($_FILES['photo']['tmp_name'], $photo);
 }
 
