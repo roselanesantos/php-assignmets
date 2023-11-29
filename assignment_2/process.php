@@ -39,16 +39,10 @@ $course6_absences = isset($_POST['course6_absences']) ? $_POST['course6_absences
 
 $photo = null;
 
-function generateRandomString() {
-    $length = 10;
-    return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil($length/strlen($x)) )),1,$length);
-}
-
 if (isset($_FILES['photo'])) {
-    $photo = "$uploaddir". generateRandomString() . '.png';
-    move_uploaded_file($_FILES['photo']['tmp_name'], $photo);
+    $photo = $uploaddir . uniqid() . '.png';
+    $moved = move_uploaded_file($_FILES['photo']['tmp_name'], $photo);
 }
-
 
 $query = "";
 

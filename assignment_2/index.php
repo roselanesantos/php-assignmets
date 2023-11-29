@@ -11,6 +11,7 @@ block_if_not_authenticated();
     <title>View Content</title>
     <meta name="author" content="Roselane Goncalves dos Santos" />
     <meta name="description" content="This is a database to add student grades">
+    <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 <?php
@@ -56,7 +57,7 @@ function calc_grade($student_data, $course)
                 <td colspan="6">
                     <form>
                         Student's name:
-                        <select id="student_id" name="student_id" method="GET">
+                        <select class="form-control w-30 d-inline-block" id="student_id" name="student_id" method="GET">
                             <option value=''></option>
                             <?php
                             while ($row = $result->fetch_assoc()) {
@@ -67,7 +68,7 @@ function calc_grade($student_data, $course)
                             ?>
                         </select>
 
-                        <button type="submit" name="btnSubmit" value="btnSubmit">Submit</button><br>
+                        <button type="submit" name="btnSubmit" class="btn btn-primary" value="btnSubmit">Submit</button><br>
                     </form>
 
                 </td>
@@ -77,7 +78,7 @@ function calc_grade($student_data, $course)
             </tr>
             <tr>
                 <td class="student-photo" colspan="9">
-                    <? if ($student_data["photo"]) { ?>
+                    <? if (isset($student_data["photo"]) && $student_data["photo"]) { ?>
                         <img src="<?=$student_data['photo']?>">
                     <? } else { ?>
                         <img src="img/avatar.png">

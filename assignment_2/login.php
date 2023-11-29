@@ -37,6 +37,7 @@ if (isset($_POST["submit"])) {
     <title>View Content</title>
     <meta name="author" content="Roselane Goncalves dos Santos" />
     <meta name="description" content="This is a database to add student grades">
+    <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -56,8 +57,7 @@ if (isset($_POST["submit"])) {
             <label>Password: </label>
             <input required type="password" name="password" id="password">
             <input type="submit" name="submit" id="submit" value="Login">
-        </form>
-        <a href="create_user.php">Create User</a>
+        </form>        
     </main>
 
     <?php

@@ -11,6 +11,7 @@ block_if_not_authenticated();
     <title>Add Content</title>
     <meta name="author" content="Roselane Goncalves dos Santos" />
     <meta name="description" content="This is a database to add student grades">
+    <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 

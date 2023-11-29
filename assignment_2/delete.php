@@ -34,12 +34,16 @@ if (isset($_GET["student_id"])) {
     <title>Delete Content</title>
     <meta name="author" content="Roselane Goncalves dos Santos" />
     <meta name="description" content="This is a database to delete student grades">
+    <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
     <?php
     require "header.php";
+
+    $sql = "SELECT id, student_name FROM student_grade";
+    $result = $mysqli->query($sql);
     ?>
 
     <main>
@@ -49,11 +53,9 @@ if (isset($_GET["student_id"])) {
 
         <form>
             Student's name:
-            <select id="student_id" name="student_id" method="GET">
+            <select class="form-control w-30 d-inline-block" id="student_id" name="student_id" method="GET">
                 <option value=''></option>
                 <?php
-                $sql = "SELECT id, student_name FROM student_grade";
-                $result = $mysqli->query($sql);
                 while ($row = $result->fetch_assoc()) {
                     echo "<option value='" . $row["id"] . "' " . ($student_id == $row["id"] ? "selected" : "") . ">"
                         . $row["id"] . "-" . $row["student_name"]
@@ -62,7 +64,7 @@ if (isset($_GET["student_id"])) {
                 ?>
             </select>
 
-            <button type="submit" name="submit" value="submit">Delete Student</button><br>
+            <button type="submit" name="btnSubmit" class="btn btn-primary" value="btnSubmit">Submit</button><br>
         </form>
     </main>
     <?php

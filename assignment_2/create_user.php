@@ -29,9 +29,10 @@ if (isset($_POST["submit"])) {
 
 <head>
     <meta charset="utf-8" />
-    <title>View Content</title>
+    <title>Create User</title>
     <meta name="author" content="Roselane Goncalves dos Santos" />
     <meta name="description" content="This is a database to add student grades">
+    <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -52,7 +53,10 @@ if (isset($_POST["submit"])) {
             <input required type="text" name="username" id="username">
             <label>password: </label>
             <input required type="password" name="password" id="password">
-            <input type="submit" name="submit" id="submit" value="Login">
+            <input type="submit" name="submit" id="submit" value="Create User">
+            <a href="login.php">
+                <input type="button" name="return" id="return" value="Return">
+            </a>
         </form>
     </main>
 
